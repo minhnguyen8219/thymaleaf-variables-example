@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable Example</title>
+
+</head>
+<body>
+
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+        <tr th:each="user, x  : ${userList}">
+            <td th:text="${x.count}"></td>
+            <td th:with="id = ${user.id}" th:text="${id}"></td>
+            <td th:with="name = ${user.name}" th:text="${name}"></td>
+            <td th:with="address = ${user.address}" th:text="${address}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
+    
+    

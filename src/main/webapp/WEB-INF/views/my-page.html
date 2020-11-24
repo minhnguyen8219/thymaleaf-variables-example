@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:replace="~{fragments/my-template :: title}">My Page</title>
+
+</head>
+<body>
+    <h1>My Page</h1>
+    <div th:insert="~{fragments/my-template :: my-fragment1}"></div>
+    <div th:insert="~{fragments/my-template :: my-fragment2}"></div>
+    <div th:insert="~{fragments/my-template :: #my-id1}"></div>
+    <div th:insert="~{fragments/my-template :: p.my-class}"></div>
+
+</body>
+</html>
+    
+    
